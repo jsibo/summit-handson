@@ -1,6 +1,4 @@
-# summit-handson
-
-## Welcome to your hands-on API activity!
+# Summit Hands-on API activity
 
 ## Objectives
 - Create a REST endpoints that support all the basic HTTP methods:
