@@ -1,7 +1,7 @@
 # Summit Hands-on API activity
 
 ## Objectives
-- Create a REST endpoints that support all the basic HTTP methods:
+- Create REST endpoints that support all the basic HTTP methods:
   - GET
   - POST
   - PUT
