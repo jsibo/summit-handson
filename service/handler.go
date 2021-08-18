@@ -7,7 +7,7 @@ import (
 )
 
 // Create / Post
-func (s *MovieService) AddThing(c *gin.Context) {
+func (s *StudentDirectory) AddStudent(c *gin.Context) {
 
 	// Code for function
 
@@ -15,48 +15,65 @@ func (s *MovieService) AddThing(c *gin.Context) {
 	}
 }
 
-// Read / Get all movies
-func (s *MovieService) GetThings(c *gin.Context) {
+// Read / - Get all Students
+func (s *StudentDirectory) GetAllStudents(c *gin.Context) {
 	// Code for function
 
 	// Error handling
 }
 
-// Read / Get an individual movie
-func (s *MovieService) GetOneThing(c *gin.Context) {
+// Read / - Get a Student by ID 
+func (s *StudentDirectory) GetStudentByStudentId(c *gin.Context) {
 
 	// Code for function
 }
 
-// Update / Put
-func (s *MovieService) UpdateThing(c *gin.Context) {
-	// Code for function
-
-	// Error handling
-}
-
-// Delete / Delete
-func (s *MovieService) DeleteThing(c *gin.Context) {
+// Update / Put - Update a Student by ID
+func (s *StudentDirectory) UpdateStudentById(c *gin.Context) {
 	// Code for function
 
 	// Error handling
 }
 
-// Reset datastore 
-// TODO: Update based upon service we create
-func (s *MovieService) ResetData(c *gin.Context) {
-	datastore = map[string]movies{
-		"Space Jam": {
-			Name:    "Space Jam",
-			Ratings: 5,
-			Actors:  []string{"Michael Jordan", "Bugs Bunny"},
-			Watched: true,
+// Update / Put - Add Course to Student by ID
+func (s *StudentDirectory) AddCourseToStudentById(c *gin.Context) {
+	// Code for function
+
+	// Error handling
+}
+
+// Update / Put - Update Graduation Status by ID
+func (s *StudentDirectory) UpdateGraduatedById(c *gin.Context) {
+	// Code for function
+
+	// Error handling
+}
+
+// Delete / Delete - Delete a Student By ID
+func (s *StudentDirectory) DeleteStudentById(c *gin.Context) {
+	// Code for function
+
+	// Error handling
+}
+
+// Reset data 
+func (s *StudentDirectory) ResetData(c *gin.Context) {
+	datastore = map[string]student{
+		"Michael Jordan": {
+			Name:    "Michael Jordan",
+			StudentId: "mj",
+			Program:  "App Development",
+			Courses: []string{"Agile 101", "Java 101"},
+			Graduated: false,
+			EnrollmentDate: "7/21/21"
 		},
-		"Scarface": {
-			Name:    "Scarface",
-			Ratings: 5,
-			Actors:  []string{"Al Pacino"},
-			Watched: true,
+		"Tyrone Plunkett": {
+			Name:    "Tyrone Plunkett",
+			StudentId: "tp",
+			Program:  "App Development",
+			Courses: []string{"Agile 101", "Java 101", "Public Speaking", "Capstone"},
+			Graduated: true,
+			EnrollmentDate: "6/1/21"
 		},
 	}
 	c.JSON(http.StatusAccepted, gin.H{
