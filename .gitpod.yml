@@ -3,16 +3,10 @@ image: gitpod/workspace-full
 tasks:
   - init: go get -v -t -d ./...
 
-github:
-  prebuilds:
-    master: true
-    branches: true
-    pullRequests: true
-    pullRequestsFromForks: true
-    addCheck: false
-    addComment: false
-    addBadge: true
-
 vscode:
   extensions:
-    - premparihar.gotestexplorer@0.1.10:jvUM8akrQ67vQxfjaxCgCg==
+    - golang.go
+
+ports:
+  - port: 8080
+    onOpen: open-preview

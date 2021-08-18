@@ -23,9 +23,16 @@ func (s *StudentDirectory) GetAllStudents(c *gin.Context) {
 }
 
 // Read / - Get a Student by ID 
-func (s *StudentDirectory) GetStudentByStudentId(c *gin.Context) {
+func (s *StudentDirectory) GetStudentById(c *gin.Context) {
+	if val, ok := datastore[c.Param("student_id")]; ok {
 
-	// Code for function
+		c.JSON(http.StatusOK, datastore[c.Param("student_id")])
+		return
+	}
+
+	c.JSON(http.StatusNotFound, gin.H{
+		"message": fmt.Sprintf("Unable to find a student with id: %v.", c.Param("student_id")),
+	})
 }
 
 // Update / Put - Update a Student by ID

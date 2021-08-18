@@ -6,11 +6,13 @@ import (
 )
 
 func main() {
+	svc := service.StudentDirectory{
+		Validator: validator.New(),
+	}
 
 	router := gin.Default()
 
-	// Our endpoints here
-
+	router.GET("/student/:id", svc.GetStudentById)
 	router.Run()
 	}
 }
