@@ -7,7 +7,7 @@
   - PUT
   - DELETE
 - Familiarize with REST Architecture using GoLang & Gin
-- Run code on your local machine and be able to interact with your HTTP methods
+- Run code on GitPod (cloud integrated development environment (IDE)) and be able to interact with your HTTP methods
 
 ## Prerequisites
 - A browser
