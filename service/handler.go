@@ -12,7 +12,6 @@ func (s *StudentDirectory) AddStudent(c *gin.Context) {
 	// Code for function
 
 	// Error handling
-	}
 }
 
 // Read / - Get all Students
@@ -25,13 +24,12 @@ func (s *StudentDirectory) GetAllStudents(c *gin.Context) {
 // Read / - Get a Student by ID 
 func (s *StudentDirectory) GetStudentById(c *gin.Context) {
 	if val, ok := datastore[c.Param("student_id")]; ok {
-
-		c.JSON(http.StatusOK, datastore[c.Param("student_id")])
+		c.JSON(http.StatusOK, val)
 		return
 	}
 
 	c.JSON(http.StatusNotFound, gin.H{
-		"message": fmt.Sprintf("Unable to find a student with id: %v.", c.Param("student_id")),
+		"message": fmt.Sprintf("Unable to find a student with id: %v", c.Param("student_id")),
 	})
 }
 
@@ -72,7 +70,7 @@ func (s *StudentDirectory) ResetData(c *gin.Context) {
 			Program:  "App Development",
 			Courses: []string{"Agile 101", "Java 101"},
 			Graduated: false,
-			EnrollmentDate: "7/21/21"
+			EnrollmentDate: "7/21/21",
 		},
 		"Tyrone Plunkett": {
 			Name:    "Tyrone Plunkett",
@@ -80,7 +78,7 @@ func (s *StudentDirectory) ResetData(c *gin.Context) {
 			Program:  "App Development",
 			Courses: []string{"Agile 101", "Java 101", "Public Speaking", "Capstone"},
 			Graduated: true,
-			EnrollmentDate: "6/1/21"
+			EnrollmentDate: "6/1/21",
 		},
 	}
 	c.JSON(http.StatusAccepted, gin.H{

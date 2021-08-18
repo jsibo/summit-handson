@@ -20,18 +20,18 @@ var datastore = defaultData
 var defaultData = map[string]student{
 	"Michael Jordan": {
 		Name:    "Michael Jordan",
-		StudentId: "mj",
+		StudentId: "1",
 		Program:  "App Development",
 		Courses: []string{"Agile 101", "Java 101"},
 		Graduated: false,
-		EnrollmentDate: "7/21/21"
+		EnrollmentDate: "7/21/21",
 	},
 	"Tyrone Plunkett": {
 		Name:    "Tyrone Plunkett",
-		StudentId: "tp",
+		StudentId: "2",
 		Program:  "App Development",
 		Courses: []string{"Agile 101", "Java 101", "Public Speaking", "Capstone"},
 		Graduated: true,
-		EnrollmentDate: "6/1/21"
+		EnrollmentDate: "6/1/21",
 	},
 }

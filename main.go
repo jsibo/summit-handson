@@ -3,6 +3,7 @@ package main
 import (
 	"github.com/gin-gonic/gin"
 	"github.com/jsibo/summit-handson/service"
+	"github.com/go-playground/validator/v10"
 )
 
 func main() {
@@ -14,5 +15,4 @@ func main() {
 
 	router.GET("/student/:id", svc.GetStudentById)
 	router.Run()
-	}
 }
