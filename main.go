@@ -13,6 +13,6 @@ func main() {
 
 	router := gin.Default()
 
-	router.GET("/student/:id", svc.GetStudentById)
+	router.GET("/student/:student_id", svc.GetStudentById)
 	router.Run()
 }
