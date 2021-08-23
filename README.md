@@ -10,6 +10,7 @@
 - Run code on GitPod (cloud integrated development environment (IDE)) and be able to interact with your HTTP methods
 
 ## Prerequisites
+- GitHub account
 - A browser
 - Postman (optional)
 
