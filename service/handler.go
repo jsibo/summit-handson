@@ -64,17 +64,17 @@ func (s *StudentDirectory) DeleteStudentById(c *gin.Context) {
 // Reset data 
 func (s *StudentDirectory) ResetData(c *gin.Context) {
 	datastore = map[string]student{
-		"Michael Jordan": {
+		"1": {
 			Name:    "Michael Jordan",
-			StudentId: "mj",
+			StudentId: "1",
 			Program:  "App Development",
 			Courses: []string{"Agile 101", "Java 101"},
 			Graduated: false,
 			EnrollmentDate: "7/21/21",
 		},
-		"Tyrone Plunkett": {
+		"2": {
 			Name:    "Tyrone Plunkett",
-			StudentId: "tp",
+			StudentId: "2",
 			Program:  "App Development",
 			Courses: []string{"Agile 101", "Java 101", "Public Speaking", "Capstone"},
 			Graduated: true,

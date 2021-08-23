@@ -18,7 +18,7 @@ type StudentDirectory struct {
 var datastore = defaultData
 
 var defaultData = map[string]student{
-	"Michael Jordan": {
+	"1": {
 		Name:    "Michael Jordan",
 		StudentId: "1",
 		Program:  "App Development",
@@ -26,7 +26,7 @@ var defaultData = map[string]student{
 		Graduated: false,
 		EnrollmentDate: "7/21/21",
 	},
-	"Tyrone Plunkett": {
+	"2": {
 		Name:    "Tyrone Plunkett",
 		StudentId: "2",
 		Program:  "App Development",
